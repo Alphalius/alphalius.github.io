@@ -11,27 +11,34 @@
 </head>
 <body>
 
-<section id="webPage">
-    <div class="webPage">
-        <div class="promillageWrapper">
-            <h id="titleHeader">Alcoholpromillage & Toestand</h>
-            <label for="userGewicht">Hoeveel weegt u in kilogram?</label>
-            <input type="text" id="userGewicht" placeholder="bv: 80">
-            <label for="gedronkenGlazen">Hoeveel glazen heeft u gedronken?</label>
-            <input type="text" id="gedronkenGlazen" placeholder="bv: 3">
-            <label for="tijdGeleden">Hoeveel minuten geleden heeft u uw eerste glas gedronken?</label>
-            <input type="text" id="tijdGeleden" placeholder="bv: 60">
-            <label for="userSex">Wat is uw lichaamsvocht %? 0.7 bij mannen & 0.5 bij vrouwen.</label>
-            <input type="text" id="lichaamsVocht" placeholder="bv: 0.7">
-            <button id="calculatorButton" href=".secondWrapper">BEREKEN</button>
+<section id="webPage" class="webPage">
+    <div class="promillageWrapper">
+        <h id="titleHeader">Alcoholpromillage & Toestand</h>
+        <label for="userGewicht">Hoeveel weegt u in kilogram?</label>
+        <input type="text" id="userGewicht" placeholder="bv: 80">
+        <label for="gedronkenGlazen">Hoeveel glazen heeft u gedronken?</label>
+        <input type="text" id="gedronkenGlazen" placeholder="bv: 3">
+        <label for="tijdGeleden">Hoeveel minuten geleden heeft u uw eerste glas gedronken?</label>
+        <input type="text" id="tijdGeleden" placeholder="bv: 60">
+        <!-- <label for="userSex">Wat is uw lichaamsvocht %? 0.7 bij mannen & 0.5 bij vrouwen.</label>
+        <input type="text" id="lichaamsVocht" placeholder="bv: 0.7"> -->
+        <select name="userSex" id="userSex">
+            <option value="0.7">Man</option>
+            <option value="0.5">Vrouw</option>
+        </select>
+        <button id="calculatorButton" href=".scoreWrapper">BEREKEN</button>
+        
+    </div>
+        
+    <div class="secondWrapper">
+        <div id="scoreWrapper">
             <label for="promillageParagraph">Je uitslag is:</label>
             <p id="promillageParagraph"></p>
-        </div>
-        
-        <div class="secondWrapper">
             <img src="" alt="Reference Image" id="referenceImage">
+        </div>
+        <div id="creditsDiv">
             <h id="creditsHeader">This project was made by Alphalius</h>
-            <p id="creditsParagraph">This project was created for a high school Computer Science project. Of course, I hope to get a good grade for this, but it would be awesome if you checked out my other projects and gave me a follow!</p>
+        <p id="creditsParagraph">This project was created for a high school Computer Science project. Of course, I hope to get a good grade for this, but it would be awesome if you checked out my other projects and gave me a follow!</p>
         </div>
     </div>
 </section>
