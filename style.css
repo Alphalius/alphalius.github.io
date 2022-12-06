@@ -10,21 +10,19 @@
     --bg-color: #1e1e1e;
     --text-color: #fff;
     --palette-one: #001220;
-    --palette-two: #fbae3c;
+    --palette-two: #a7233a;
 }
 
 body {
     background-color: var(--bg-color);
-    background-image: url("img/blob.svg");
+    background-image: url("img/circle-scatter.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     color: var(--text-color);
 }
 
-#webPage {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
+/* Page Content */
 
 .webPage {
     display: flex;
@@ -32,9 +30,13 @@ body {
     justify-content: center;
     align-items: center;
     gap: 50px;
+    margin: 100px 0px 0px 0px;
 }
 
 .promillageWrapper {
+    height: auto;
+    width: calc(100% - 50px);
+    max-width: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,13 +47,13 @@ body {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
-    border:1px solid rgba(255, 255, 255, 0.18);
+    border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    animation: attentionAnimationn 1s 1;
+    animation: attentionAnimationn 1s 1 ease;
 }
 
 @keyframes attentionAnimationn {
-    0% { opacity: 25%; }
+    0% { opacity: 25%; transform: translateX(-50%);}
     100% {}
 }
 
@@ -70,6 +72,21 @@ body {
     text-align: center;
 }
 
+#userSex, #userSex > option {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    color: var(--text-color);
+    padding: 5px 15px 5px 15px;
+}
+
+#userSex > option {
+    color: var(--bg-color);
+}
+
 ::placeholder {
     color: #fff;
 }
@@ -84,7 +101,7 @@ body {
     border: none;
     padding: 10px 40px 10px 40px;
     border-radius: 10px;
-    margin: 10px 0px 10px 0px;
+    margin: 10px 0px 0px 0px;
     font-size: 1.15em;
     text-transform: uppercase;
     font-weight: 800;
@@ -95,7 +112,8 @@ body {
 
 .secondWrapper {
     height: auto;
-    width: 600px;
+    width: auto;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -108,17 +126,21 @@ body {
     border-radius: 20px;
     border:1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    animation: attentionAnimation 1s 1;
+    animation: attentionAnimation 1s 1 ease;
 }
 
 @keyframes attentionAnimation {
-    0% { opacity: 50%; }
+    0% { opacity: 50%; transform: translateX(50%); }
     100% {}
 }
 
 #creditsHeader {
     font-size: 1.5em;
     font-weight: 800;
+}
+
+#scoreWrapper {
+    display: none;
 }
 
 #promillageParagraph {
@@ -140,17 +162,15 @@ body {
 
 @media all and (max-width: 500px) {
     .webPage {
-        margin-top: 350px;
-        margin-bottom: 50px;
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
     .secondWrapper {
         height: auto;
         width: 250px;
     }
-    .promillageWrapper {
+    /* .promillageWrapper {
         height: auto;
         width: 250px;
-    }
+    } */
     
 }
